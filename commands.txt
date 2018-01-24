@@ -1,0 +1,6 @@
+ansible-playbook --syntax-check configure_mail.yml
+ansible-playbook playbook.yml --tags 'server'
+ansible mailservers -a 'yum list installed postfix'
+ansible-playbook playbook.yml --skip-tags server
+lab task-control-tags grade
+lab task-control-tags cleanup
